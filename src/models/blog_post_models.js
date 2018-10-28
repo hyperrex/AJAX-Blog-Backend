@@ -6,14 +6,21 @@ const getAllPosts = () => {
   return database;
 };
 
-// getPostById
+const getPostById = id => {
+  let result = database.find(post => post.id === id);
+  if (!result) {
+    result = { status: 400, error: 'ID not found' };
+    return result;
+  }
+  return result;
+};
 // createPost
 // updatePost
 // deletePost
 
 module.exports = {
-  getAllPosts
-  // getPostById
+  getAllPosts,
+  getPostById
   // createPost,
   // updatePost,
   // deletePost

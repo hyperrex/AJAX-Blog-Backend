@@ -12,13 +12,23 @@ const getAllPosts = async (req, res, next) => {
 };
 
 // getPostById
+const getPostById = async (req, res, next) => {
+  try {
+    const post = model.getPostById(req.params.id)
+    console.log(post);
+    return res.status(200).json(post);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 // createPost
 // updatePost
 // deletePost
 
 module.exports = {
-  getAllPosts
-  // getPostById
+  getAllPosts,
+  getPostById
   // createPost,
   // updatePost,
   // deletePost
