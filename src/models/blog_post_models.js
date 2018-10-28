@@ -1,16 +1,20 @@
 const uuid = require('uuid/v4');
 const database = require('../../database/db.json');
 
-// createPost
 // getAllPosts
+const getAllPosts = () => {
+  return database;
+};
+
 // getPostById
+// createPost
 // updatePost
 // deletePost
 
 module.exports = {
+  getAllPosts
+  // getPostById
   // createPost,
-  // getAllPosts,
-  // getPostById,
   // updatePost,
   // deletePost
 };

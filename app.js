@@ -9,6 +9,7 @@ if (process.env.NODE_ENV !== 'test') app.use(morgan('dev'));
 
 app.use(bodyParser.json());
 app.use(cors());
+app.disable('x-powered-by');
 
 const routes = require('./src/routes/blog_post_routes.js');
 
