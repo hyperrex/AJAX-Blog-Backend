@@ -10,7 +10,7 @@ if (process.env.NODE_ENV !== 'test') app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(cors());
 
-const routes = require('./src/routes/blog.js');
+const routes = require('./src/routes/blog_post_routes.js');
 
 app.use('/blog', routes);
 
