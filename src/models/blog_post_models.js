@@ -56,12 +56,12 @@ const deletePost = id => {
     result = { status: 400, error: 'ID not found' };
     return result;
   }
-  for (let x = 0; x < database.length; x++) {
-    if (database[x].id === id) {
-      database.splice(x, 1);
+  database.forEach((element, index) => {
+    if (element.id === id) { 
+      database.splice(index, 1);
     }
-    return database;
-  }
+  });
+  return database;
 };
 
 module.exports = {
